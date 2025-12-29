@@ -11,6 +11,7 @@
 # print(pandas.__version__)
 # print("tayyab")
 import hashlib
+from unittest import case
 # print("\'tayyab \n \"abdul hannan\"")
 # print ("good boy" , 4 , 5 ,7, sep="~" , end="$$")
 # print("hello" , end=" #")
@@ -181,18 +182,114 @@ import hashlib
     
 
 #lets do an exercise using time module
-import time
-current_time = time.localtime()
-hour = current_time.tm_hour
-print("Current hour:", hour)
-if hour < 12:
-    print("Good morning!")
-elif 12 <= hour < 18:
-    print("Good afternoon!")
-elif 18 <= hour < 21:
-    print("Good evening!")
-else:
-    print("Good night!")
+# import time
+# current_time = time.localtime()
+# hour = current_time.tm_hour
+# print("Current hour:", hour)
+# if hour < 12:
+#     print("Good morning!")
+# elif 12 <= hour < 18:
+#     print("Good afternoon!")
+# elif 18 <= hour < 21:
+#     print("Good evening!")
+# else:
+#     print("Good night!")
+# timestamp = time.strftime("%H:%M:%S")
+# print(timestamp)
+# timestamp = time.strftime("%H")
+# print(timestamp)
+# timestamp = time.strftime("%M")
+# print(timestamp)
+# timestamp = time.strftime("%S")
+# print(timestamp)
 
+#lets do match case statement it is similar to switch case in other languages
+# it is available in python 3.10 and later versions
+# it is a new feature in python 3.10 and later versions
+# day=int(input("Enter day number (1-7): "))
+# match day:
+#     case 1:
+#         print("Monday")
+#     case 2:
+#         print("Tuesday")
+#     case 3:
+#         print("Wednesday")
+#     case 4:
+#         print("Thursday")
+#     case 5:
+#         print("Friday")
+#     case 6:
+#         print("Saturday")
+#     case 7:
+#         print("Sunday")
+#     case _ if day<1 or day>7: #  wildcard case with condition
+#         print("Day number must be between 1 and 7") # added condition to wildcard case
+#     case _ if day==0:    # default case will not work with condition
+#         print("Day number cannot be zero") 
+#     case _: # default case
+#         print("Invalid day number")
+# lets do for loop
+# fruits = ["apple", "banana", "cherry"]
+# for counter in fruits:
+#     print(counter)
+#     for character in counter:
+#         print(character)
+# x = input("Enter your name: ")
+# for character in x:
+#     print(character)
+#     if character=="a":
+#         print("This is letter a")
 
-    
+# for c in "tayyab":
+#     print(c)
+#     if c=="a":
+#         print("This is letter a")
+
+# for i in range(6):
+#     print(i)
+# for i in range(1, 6): # it will print from 1 to 5 ,6 is excluded
+#     print(i)
+# for i in range(1, 50001, 5000):
+#     print(i)
+
+# for i in range(10, 0, -1): # it will print from 10 to 1 ,0 is excluded
+#     print(i)
+# lets do while loop using while loop
+# count=1
+# while count<=5:
+#     print("Count is:", count)
+#     count+=1
+# i=int(input("Enter starting of loop: "))
+# while i<=10:
+#     i=int(input("Enter a number: "))
+#     print(i)
+
+#lets print even numbers between 1 to 100 using while loop
+# num=int(input("Enter starting number: "))
+# while num<=20:
+#     if num%2==0:
+#         print("its even number:", num)
+#     num+=1
+#lets print table of a number using while loop
+# num=int(input("Enter a number to print its table: "))
+# i=1
+# while i<=10:
+    # print(f"{num} x {i} = {num*i}") # it will print num multiplied by i and f string is used for formatting
+    # print(num ,"*" , i, "=", num*i) # it will print num multiplied by i
+    # i+=1
+
+# lets use continue and break statements in loops
+# for i in range(1, 11):
+#     if i==5:   # it will skip the iteration when i is 5
+#         continue
+#     print(i)
+# for i in range(1, 11):
+#     if i==5:
+#         break
+#     print(i)
+
+# a,b = input("Enter two numbers separated by space: ").split()
+# print("First number is:", a)  
+# print("Second number is:", b)  
+a, b,c,d = map(int, input("Enter four numbers: ").split())
+print(a, b , c , d)
