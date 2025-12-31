@@ -10,7 +10,7 @@
 # import pandas
 # print(pandas.__version__)
 # print("tayyab")
-import hashlib
+# import hashlib
 from unittest import case
 # print("\'tayyab \n \"abdul hannan\"")
 # print ("good boy" , 4 , 5 ,7, sep="~" , end="$$")
@@ -76,6 +76,31 @@ from unittest import case
 # y = "is "
 # z = "awesome"
 # print(x + y + z)
+#lets do  sequence data types list tuple and range
+lst = [1, 2, 3, 4, 5]
+tup = (1, 2, 3, 4, 5)
+rng = range(1, 6)
+# print(type(lst))
+# print(type(tup))
+# print(type(rng))
+r = range(10)
+# print(r)
+# print(list(r))
+# print(tuple(r))
+# lets do mapping data types dict
+mydict = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
+# print(type(mydict))
+# print(mydict)
+# print(mydict.values())
+# print(mydict.keys())
+# print(mydict.items())
+# print(mydict.get("name"))
+# print(mydict["age"])
+# lets do set data type
+myset = {1, 2, 3, 4, 5}
+print(type(myset))
+print(myset)
+
 
 # x = "awesome"
 # def myfunc():
@@ -291,5 +316,138 @@ from unittest import case
 # a,b = input("Enter two numbers separated by space: ").split()
 # print("First number is:", a)  
 # print("Second number is:", b)  
-a, b,c,d = map(int, input("Enter four numbers: ").split())
-print(a, b , c , d)
+# a, b,c,d = map(int, input("Enter four numbers: ").split())
+# print(a, b , c , d)
+# lets do functions in python
+# def greet(name):
+#     print("Hello " + name + ". \nGood morning!")
+# greet("Tayyab Abdul Hannan")
+
+#let do another function with basic arithmetic operations take 2 numbers as input and return and print their sum and difference
+# def arithmetic_operations(num1, num2):
+#     sum_result = num1 + num2
+#     difference_result = num1 - num2
+#     print("Sum:", sum_result)
+#     print("Difference:", difference_result)
+# a, b = map(int, input("Enter two numbers separated by space: ").split())
+# arithmetic_operations(a , b)
+
+# def pass_function():
+#     pass # it is used when we want to create a function but we don't want to write any code in it yet
+# pass_function()
+#function arguments with examples
+# def function_arguments(arg1, arg2, arg3="default value"):
+#     print("Argument 1:", arg1)
+#     print("Argument 2:", arg2)
+#     print("Argument 3:", arg3)
+# function_arguments("value1", "value2")
+# function_arguments("value1", "value2", "custom value3")
+# function_arguments(arg2="value2", arg1="value1") # calling function with keyword arguments order doesn't matter
+# function_arguments(arg3="custom value3", arg1="value1", arg2="value2")
+
+# def average(*args): #this is example of variable length arguments and tuqple unpacking 
+#     total = sum(args)
+#     print("Total = ", total)
+#     count = len(args)
+#     print("Count = ", count)
+#     avg = total / count
+#     return avg
+# result = average(10, 20, 30, 40, 50,60,70,80,90,100)
+# print("Average:", result)
+
+#lets do an example of dictionary unpacking with function
+# def display_info(name, age, city):
+#     print("Name:", name)
+#     print("Age:", age)
+#     print("City:", city)    
+# info = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
+# display_info(**info) # dictionary unpacking with ** operator
+
+#lets do an example of returning multiple values from a function
+# def calculate_operations(num1, num2):
+#     sum_result = num1 + num2
+#     difference_result = num1 - num2
+#     product_result = num1 * num2
+#     quotient_result = num1 / num2 if num2 != 0 else "Cannot divide by zero"
+#     return sum_result, difference_result, product_result, quotient_result
+# a, b = map(int, input("Enter two numbers separated by space: ").split())
+# sum_val, diff_val, prod_val, quot_val = calculate_operations(a, b)
+# print("Sum:", sum_val)
+# print("Difference:", diff_val)
+# print("Product:", prod_val)
+# print("Quotient:", quot_val)
+
+#lets code on lists in python
+# fruits = ["apple", "banana", "cherry" ,10.5 , True , None]
+# print(fruits)
+# print(fruits[0])  # accessing first element
+# print(fruits[1])  # accessing second element    
+# print(fruits[2])  # accessing third element
+# print(fruits[-1]) # accessing last element
+# print(fruits[-2]) # accessing second last element
+# print(fruits[len(fruits)-3]) # accessing third last element
+# print(fruits[1:7]) # accessing elements from index 1 to 3 ,4 is excluded
+# print(fruits[:3]) # accessing elements from index 0 to 2 ,3 is excluded
+# print(fruits[2:]) # accessing elements from index 2 to end of list
+# print(fruits[:]) # accessing all elements
+# print(fruits[-4:-1]) # accessing elements from index len(fruits)-4 to len(fruits)-2 ,len(fruits)-1 is excluded
+# print(fruits[0:7:2]) # accessing all elements with step of 2
+# print(fruits[0:7:3]) # accessing all elements with step of 3
+
+# if 10.5 in fruits:
+#     print("10.5 is present in the list")
+# else:
+#     print("10.5 is not present in the list")  
+# if "grape" in fruits:
+#     print("grape is present in the list")
+# else:
+#     print("grape is not present in the list")
+# if "apple" not in fruits:
+#     print("apple is not present in the list")
+# else:
+#     print("apple is present in the list")
+# if "ch" in "cherry":
+#     print("ch is present in cherry")
+# else:
+#     print("ch is not present in cherry")
+#list in comprehension
+# lst = [x for x in range(10)]
+# print(lst)
+# squares = [x**2 for x in range(1, 11)]
+# print(squares)
+# even_squares = [x**2 for x in range(1, 11) if x % 2 == 0]
+# print(even_squares)
+# odd_squares = [x**2 for x in range(1, 11) if x % 2 != 0]
+# print(odd_squares)
+# list methods with examples
+# numbers = [5, 2, 9, 1, 5, 6]
+# print("Original list:", numbers)
+# numbers.append(15) # adds 15 at the end of the list
+# numbers.append(10) # adds 10 at the end of the list
+# print("After append:", numbers)
+# numbers.insert(2, 20) # inserts 20 at index 2
+# print("After insert 20 at index 2:", numbers)
+# numbers.sort() # sorts the list in ascending order
+# print("After sort:", numbers)
+# numbers.sort(reverse=True) # sorts the list in descending order
+# print("After sort in descending order:", numbers)
+# numbers.reverse() # reverses the list
+# print("After reverse:", numbers)
+# print(numbers.index(2)) # returns the index of first occurrence of 2
+# numbers.remove(5) # removes first occurrence of 5
+# print("After remove 5:", numbers)
+# popped_value = numbers.pop() # removes and returns the last element
+# print("Popped value:", popped_value)
+# print("After pop:", numbers)
+# # returns the count of 5 in the list
+# print("Count of 5:", numbers.count(5))
+# numbers_copy = numbers.copy() # creates a copy of the list
+# print("Copy of the list:", numbers_copy)
+# numbers2=numbers # this will not create a copy but will create a reference to the original list
+# numbers2.append(100)
+# print("2nd list after modifying copy:", numbers2)
+# print("Original list after modifying copy:", numbers)
+# numbers3 = numbers + numbers2 # concatenates two lists
+# print("After concatenation new list:", numbers3)
+# numbers.extend(numbers2) # extends the list by adding elements from another list
+# print("After extend original list:", numbers)
