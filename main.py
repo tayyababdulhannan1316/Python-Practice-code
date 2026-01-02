@@ -11,7 +11,7 @@
 # print(pandas.__version__)
 # print("tayyab")
 # import hashlib
-from unittest import case
+# from unittest import case
 # print("\'tayyab \n \"abdul hannan\"")
 # print ("good boy" , 4 , 5 ,7, sep="~" , end="$$")
 # print("hello" , end=" #")
@@ -77,18 +77,18 @@ from unittest import case
 # z = "awesome"
 # print(x + y + z)
 #lets do  sequence data types list tuple and range
-lst = [1, 2, 3, 4, 5]
-tup = (1, 2, 3, 4, 5)
-rng = range(1, 6)
+# lst = [1, 2, 3, 4, 5]
+# tup = (1, 2, 3, 4, 5)
+# rng = range(1, 6)
 # print(type(lst))
 # print(type(tup))
 # print(type(rng))
-r = range(10)
+# r = range(10)
 # print(r)
 # print(list(r))
 # print(tuple(r))
 # lets do mapping data types dict
-mydict = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
+# mydict = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
 # print(type(mydict))
 # print(mydict)
 # print(mydict.values())
@@ -97,9 +97,9 @@ mydict = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
 # print(mydict.get("name"))
 # print(mydict["age"])
 # lets do set data type
-myset = {1, 2, 3, 4, 5}
-print(type(myset))
-print(myset)
+# myset = {1, 2, 3, 4, 5}
+# print(type(myset))
+# print(myset)
 
 
 # x = "awesome"
@@ -209,13 +209,14 @@ print(myset)
 #lets do an exercise using time module
 # import time
 # current_time = time.localtime()
+# print("Current time:", current_time)
 # hour = current_time.tm_hour
 # print("Current hour:", hour)
-# if hour < 12:
+# if hour >=0 and hour < 12:
 #     print("Good morning!")
-# elif 12 <= hour < 18:
+# elif hour >=12 and hour < 18:
 #     print("Good afternoon!")
-# elif 18 <= hour < 21:
+# elif hour >=18 and hour < 21 :
 #     print("Good evening!")
 # else:
 #     print("Good night!")
@@ -451,3 +452,169 @@ print(myset)
 # print("After concatenation new list:", numbers3)
 # numbers.extend(numbers2) # extends the list by adding elements from another list
 # print("After extend original list:", numbers)
+# lets do tuple in python
+# tupes can't be changed immutable
+# mytuple = (1, 2, 3, 4, 5)
+# mytuple = (1, 2, 3, 4, 5, 5, 4, 3, 2, 1)
+# print(mytuple)
+# mytuple1 = ("tayyab", "abdul", "hannan")
+# print("after concatenation",mytuple + mytuple1)
+# # mytuple[0] = 10  # this will raise an error because tuples are immutable
+# # if we want to change some value in tuple we have to convert it to list then change the value and then convert it back to tuple
+# mylist = list(mytuple)
+# mylist[0] = 10
+# mytuple = tuple(mylist)
+# print("after update", mytuple)
+# tup = (1,2)
+# tup2 = (1)
+# tup3 = (1,)
+# print(type(tup))  # it will print <class 'tuple'>
+# print(type(tup2))  # it will print <class 'int'>
+# print(type(tup3))  # it will print <class 'tuple'>
+# if 5 in mytuple:
+#     print("5 is present in the tuple")
+# print(type(mytuple))
+# print(mytuple)
+# print(mytuple[0])  # accessing first element
+# print(mytuple[1])  # accessing second element
+# print(mytuple[2])  # accessing third element
+# print(mytuple[-1]) # accessing last element
+# print(mytuple[-2]) # accessing second last element
+# print(mytuple[len(mytuple)-3]) # accessing third last element
+# print(mytuple[1:4]) # accessing elements from index 1 to 3 ,4 is excluded
+# print(mytuple[:3]) # accessing elements from index 0 to 2 ,3 is excluded
+# print(mytuple[2:]) # accessing elements from index 2 to end of tuple
+# print(mytuple[:]) # accessing all elements
+# print(mytuple[-4:-1]) # accessing elements from index len(mytuple)-4 to len(mytuple)-2 ,len(mytuple)-1 is excluded
+# print(mytuple[0:5:2]) # accessing all elements with step of 2
+# print(mytuple[0:5:3]) # accessing all elements with step of 3
+# tuple methods with examples
+# mytuple = (1, 2, 3, 4, 5, 5, 4, 3, 2, 1)
+# print("Original tuple:", mytuple)
+# print("Count of 5:", mytuple.count(5)) # returns the count of 5 in the tuple
+# print("Index of first occurrence of 3:", mytuple.index(3)) # returns the index of first occurrence of 3
+# print("Index of first occurrence of 4:", mytuple.index(4 , 3 , 7)) # returns the index of first occurrence of 4 between index 3 and 6
+# print(len(mytuple)) # returns the length of the tuple
+
+# lets create a program capable of displaying  questions to the user and storing the questions and user answers in a list display the final answers at the end and final score and final grade based on the score. questions should be from python that we have studied so far. from starting input user name and his age. lets get started
+
+# questions = [
+#     "What is the output of print(2**3)?",
+#     "Which keyword is used to define a function in Python?",
+#     "What is the correct way to create a list in Python?",
+#     "Which of the following is a valid variable name in Python?",
+#     "What does the 'len()' function do in Python?"
+# ]
+# options = [
+#     ["6", "8", "9", "12"],
+#     ["func", "def", "function", "define"],
+#     ["list = {}", "list = []", "list = ()", "list = <>"],
+#     ["1variable", "variable_name", "variable-name", "variable name"],
+#     ["Returns the number of elements in a list/string", "Returns the last element of a list/string", "Returns the first element of a list/string", "Returns the sum of elements in a list"]
+# ]
+# answers = [2, 2, 2, 2, 1] # correct options index
+# user_answers = []
+# score = 0
+# user_name = input("Enter your name: ")
+# user_age = input("Enter your age: ")
+# print(f"Welcome {user_name}, age {user_age}, to the Python Quiz!")
+# for i in range(len(questions)):
+#     print(f"Q{i+1}: {questions[i]}")
+#     for j in range(len(options[i])):
+#         print(f"{j+1}. {options[i][j]}")
+#     user_answer = int(input("Enter your answer (1-4): "))
+#     user_answers.append(user_answer)
+#     if user_answer == answers[i]:
+#         score += 1
+# print("\nQuiz Completed!")
+# print("Your Answers are:")
+# for i in range(len(questions)):
+#     print(f"Q{i+1}: {questions[i]}")
+#     print(f"Your answer: {options[i][user_answers[i]-1]}")
+#     print(f"Correct answer: {options[i][answers[i]-1]}\n")
+# print(f"Your total score: {score} out of {len(questions)}")
+questions = [
+    "What is the output of print(2**3)?",
+    "Which keyword is used to define a function in Python?",
+    "What is the correct way to create a list in Python?",
+    "Which of the following is a valid variable name in Python?",
+    "What does the 'len()' function do in Python?"
+]
+
+options = [
+    ["6", "8", "9", "12"],
+    ["func", "def", "function", "define"],
+    ["list = {}", "list = []", "list = ()", "list = <>"],
+    ["1variable", "variable_name", "variable-name", "variable name"],
+    [
+        "Returns the number of elements in a list/string",
+        "Returns the last element of a list/string",
+        "Returns the first element of a list/string",
+        "Returns the sum of elements in a list"
+    ]
+]
+
+# correct option numbers (NOT index)
+answers = [2, 2, 2, 2, 1]
+
+user_answers = []
+score = 0
+
+user_name = input("Enter your name: ")
+user_age = input("Enter your age: ")
+
+print(f"\nWelcome {user_name}, age {user_age}, to the Python Quiz!\n")
+
+# ===================== QUIZ START =====================
+for i in range(len(questions)):
+    print(f"Q{i+1}: {questions[i]}")
+
+    for j in range(len(options[i])):
+        print(f"{j+1}. {options[i][j]}")
+
+    user_choice = int(input("Enter your answer (1-4): "))
+    user_answers.append(user_choice)
+
+    if user_choice == answers[i]:
+        score += 1
+
+    print()
+
+# ===================== RESULTS =====================
+print("Quiz Completed!\n")
+print("Your Answers are:\n")
+
+for i in range(len(questions)):
+    print(f"Q{i+1}: {questions[i]}")
+
+    # user answer (step by step)
+    user_choice = user_answers[i]
+    user_index = user_choice - 1
+    user_answer_text = options[i][user_index]
+
+    # correct answer (step by step)
+    correct_choice = answers[i]
+    correct_index = correct_choice - 1
+    correct_answer_text = options[i][correct_index]
+
+    print("Your answer:", user_answer_text)
+    print("Correct answer:", correct_answer_text)
+    print()
+
+print(f"Your total score: {score} out of {len(questions)}")
+
+percentage = (score / len(questions)) * 100
+if percentage >= 90:
+    grade = "A"
+elif percentage >= 80:
+    grade = "B"
+elif percentage >= 70:
+    grade = "C"
+elif percentage >= 60:
+    grade = "D"
+elif percentage >= 50:
+    grade = "E"
+else:
+    grade = "F"
+print(f"Your grade: {grade}")
+
