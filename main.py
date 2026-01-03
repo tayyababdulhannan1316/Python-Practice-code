@@ -380,6 +380,14 @@
 
 #lets code on lists in python
 # fruits = ["apple", "banana", "cherry" ,10.5 , True , None]
+# fruits2 = ["mango", "orange"]
+# # fruits.clear() # clears the list
+# fruits2.sort() # sorts the list
+# print(fruits)
+# mixfruits = fruits + fruits2 # concatenation of two lists
+# print(mixfruits)
+# mixfruits2 = [fruits , fruits2] # nested list
+# print(mixfruits2)
 # print(fruits)
 # print(fruits[0])  # accessing first element
 # print(fruits[1])  # accessing second element    
@@ -453,9 +461,11 @@
 # numbers.extend(numbers2) # extends the list by adding elements from another list
 # print("After extend original list:", numbers)
 # lets do tuple in python
-# tupes can't be changed immutable
+# tuples can't be changed immutable
 # mytuple = (1, 2, 3, 4, 5)
 # mytuple = (1, 2, 3, 4, 5, 5, 4, 3, 2, 1)
+# mytuple.count(2) # returns the count of 2 in the tuple but we are not printing it
+# print("Count of 2:", mytuple.count(2))
 # print(mytuple)
 # mytuple1 = ("tayyab", "abdul", "hannan")
 # print("after concatenation",mytuple + mytuple1)
@@ -533,88 +543,117 @@
 #     print(f"Your answer: {options[i][user_answers[i]-1]}")
 #     print(f"Correct answer: {options[i][answers[i]-1]}\n")
 # print(f"Your total score: {score} out of {len(questions)}")
-questions = [
-    "What is the output of print(2**3)?",
-    "Which keyword is used to define a function in Python?",
-    "What is the correct way to create a list in Python?",
-    "Which of the following is a valid variable name in Python?",
-    "What does the 'len()' function do in Python?"
-]
+# questions = [
+#     "What is the output of print(2**3)?",
+#     "Which keyword is used to define a function in Python?",
+#     "What is the correct way to create a list in Python?",
+#     "Which of the following is a valid variable name in Python?",
+#     "What does the 'len()' function do in Python?"
+# ]
 
-options = [
-    ["6", "8", "9", "12"],
-    ["func", "def", "function", "define"],
-    ["list = {}", "list = []", "list = ()", "list = <>"],
-    ["1variable", "variable_name", "variable-name", "variable name"],
-    [
-        "Returns the number of elements in a list/string",
-        "Returns the last element of a list/string",
-        "Returns the first element of a list/string",
-        "Returns the sum of elements in a list"
-    ]
-]
+# options = [
+#     ["6", "8", "9", "12"],
+#     ["func", "def", "function", "define"],
+#     ["list = {}", "list = []", "list = ()", "list = <>"],
+#     ["1variable", "variable_name", "variable-name", "variable name"],
+#     [
+#         "Returns the number of elements in a list/string",
+#         "Returns the last element of a list/string",
+#         "Returns the first element of a list/string",
+#         "Returns the sum of elements in a list"
+#     ]
+# ]
 
-# correct option numbers (NOT index)
-answers = [2, 2, 2, 2, 1]
+# # correct option numbers (NOT index)
+# answers = [2, 2, 2, 2, 1]
 
-user_answers = []
-score = 0
+# user_answers = []
+# score = 0
 
-user_name = input("Enter your name: ")
-user_age = input("Enter your age: ")
+# user_name = input("Enter your name: ")
+# user_age = input("Enter your age: ")
 
-print(f"\nWelcome {user_name}, age {user_age}, to the Python Quiz!\n")
+# print(f"\nWelcome {user_name}, age {user_age}, to the Python Quiz!\n")
 
-# ===================== QUIZ START =====================
-for i in range(len(questions)):
-    print(f"Q{i+1}: {questions[i]}")
+# # ===================== QUIZ START =====================
+# for i in range(len(questions)):
+#     print(f"Q{i+1}: {questions[i]}")
 
-    for j in range(len(options[i])):
-        print(f"{j+1}. {options[i][j]}")
+#     for j in range(len(options[i])):
+#         print(f"{j+1}. {options[i][j]}")
 
-    user_choice = int(input("Enter your answer (1-4): "))
-    user_answers.append(user_choice)
+#     user_choice = int(input("Enter your answer (1-4): "))
+#     user_answers.append(user_choice)
 
-    if user_choice == answers[i]:
-        score += 1
+#     if user_choice == answers[i]:
+#         score += 1
 
-    print()
+#     print()
 
-# ===================== RESULTS =====================
-print("Quiz Completed!\n")
-print("Your Answers are:\n")
+# # ===================== RESULTS =====================
+# print("Quiz Completed!\n")
+# print("Your Answers are:\n")
 
-for i in range(len(questions)):
-    print(f"Q{i+1}: {questions[i]}")
+# for i in range(len(questions)):
+#     print(f"Q{i+1}: {questions[i]}")
 
-    # user answer (step by step)
-    user_choice = user_answers[i]
-    user_index = user_choice - 1
-    user_answer_text = options[i][user_index]
+#     # user answer (step by step)
+#     user_choice = user_answers[i]
+#     user_index = user_choice - 1
+#     user_answer_text = options[i][user_index]
 
-    # correct answer (step by step)
-    correct_choice = answers[i]
-    correct_index = correct_choice - 1
-    correct_answer_text = options[i][correct_index]
+#     # correct answer (step by step)
+#     correct_choice = answers[i]
+#     correct_index = correct_choice - 1
+#     correct_answer_text = options[i][correct_index]
 
-    print("Your answer:", user_answer_text)
-    print("Correct answer:", correct_answer_text)
-    print()
+#     print("Your answer:", user_answer_text)
+#     print("Correct answer:", correct_answer_text)
+#     print()
 
-print(f"Your total score: {score} out of {len(questions)}")
+# print(f"Your total score: {score} out of {len(questions)}")
 
-percentage = (score / len(questions)) * 100
-if percentage >= 90:
-    grade = "A"
-elif percentage >= 80:
-    grade = "B"
-elif percentage >= 70:
-    grade = "C"
-elif percentage >= 60:
-    grade = "D"
-elif percentage >= 50:
-    grade = "E"
-else:
-    grade = "F"
-print(f"Your grade: {grade}")
+# percentage = (score / len(questions)) * 100
+# if percentage >= 90:
+#     grade = "A"
+# elif percentage >= 80:
+#     grade = "B"
+# elif percentage >= 70:
+#     grade = "C"
+# elif percentage >= 60:
+#     grade = "D"
+# elif percentage >= 50:
+#     grade = "E"
+# else:
+#     grade = "F"
+# print(f"Your grade: {grade}")
+
+
+
+#lets do sets in python
+# myset = {1, 2, 3, 4, 5}
+# print(type(myset))
+# print(myset)
+# myset.add(6) # adds 6 to the set
+# print("After add:", myset)
+# myset.remove(3) # removes 3 from the set , raises error if 3 is not present
+# print("After remove 3:", myset)
+# myset.discard(4) # removes 4 from the set , does not raise error if 4 is not present
+# print("After discard 4:", myset)
+# popped_value = myset.pop() # removes and returns an arbitrary element from the set
+# print("Popped value:", popped_value)
+# print("After pop:", myset)
+# myset.clear() # clears the set
+# print("After clear:", myset)
+# set2 = {4, 5, 6, 7, 8}
+# union_set = myset.union(set2) # returns a new set with elements from both sets
+# print("Union of sets:", union_set)
+# intersection_set = myset.intersection(set2) # returns a new set with elements common to both sets
+# print("Intersection of sets:", intersection_set)
+# difference_set = myset.difference(set2) # returns a new set with elements in myset but not in set2
+# print("Difference of sets (myset - set2):", difference_set)
+# symmetric_difference_set = myset.symmetric_difference(set2) # returns a new set with elements in either set but not in both
+# print("Symmetric difference of sets:", symmetric_difference_set)
+
+
 
