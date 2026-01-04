@@ -164,6 +164,39 @@
 # print(x.swapcase()) # Swaps cases, lower case becomes upper case and vice versa
 
 #condtional statements just starts from here
+#membership operators is used to check if a value is present in a sequence such as string ,list ,tuple ,set ,dictionary
+# x = "hello world"
+# print("h" in x)
+# print("H" in x)
+# print("H" not in x)
+#identity operators is used to check if two variables are same object in memory or not 
+# print(x is x)
+# print(x is not x)
+# # more examples of identity operators
+# y = x
+# print(y is x)
+# print(y is not x)
+# a = [1, 2, 3]
+# b = a
+# print(b is a)
+# print(b is not a)
+# c = [1, 2, 3]
+# print(c is a)
+#logical operators
+# a = 10
+# b = 5
+# print(a > 5 and b < 10) # True and True = True
+# print(a > 5 and b > 10) # True and False = False
+# print(a < 5 and b < 10) # False and True = False
+# print(a < 5 and b > 10) # False and False = False
+# print(a > 5 or b < 10) # True or True = True
+# print(a > 5 or b > 10) # True or False = True
+# print(a < 5 or b < 10) # False or True = True
+# print(a < 5 or b > 10) # False or False = False
+# print(not(a > 5)) # not True = False
+# print(not(a < 5)) # not False = True
+
+#relational operators
 # age=int(input("Enter your age: "))
 # print("Your age is:", age)
 # print(age>18)
@@ -325,13 +358,13 @@
 # greet("Tayyab Abdul Hannan")
 
 #let do another function with basic arithmetic operations take 2 numbers as input and return and print their sum and difference
-# def arithmetic_operations(num1, num2):
-#     sum_result = num1 + num2
-#     difference_result = num1 - num2
-#     print("Sum:", sum_result)
-#     print("Difference:", difference_result)
-# a, b = map(int, input("Enter two numbers separated by space: ").split())
-# arithmetic_operations(a , b)
+def arithmetic_operations(num1, num2):
+    sum_result = num1 + num2
+    difference_result = num1 - num2
+    print("Sum:", sum_result)
+    print("Difference:", difference_result)
+a, b = map(int, input("Enter two numbers separated by space: ").split())
+arithmetic_operations(a , b)
 
 # def pass_function():
 #     pass # it is used when we want to create a function but we don't want to write any code in it yet
@@ -631,11 +664,17 @@
 
 
 #lets do sets in python
-# myset = {1, 2, 3, 4, 5}
-# print(type(myset))
-# print(myset)
+# myset = {1, 2, 3, 4, 5, 5, 4, 3, 2, 1}
+# print("myset:", myset) # duplicates will be removed
+# # print(type(myset))
+# myset2 = {5, 6, 10, 8, 3}
+# print("myset2:", myset2)
+# print(myset2)
+# print(myset2)
+# print(myset2)
+# myset2[0] = 10  # this will raise an error because sets are unordered and do not support indexing
 # myset.add(6) # adds 6 to the set
-# print("After add:", myset)
+# print("After adding 6:", myset)
 # myset.remove(3) # removes 3 from the set , raises error if 3 is not present
 # print("After remove 3:", myset)
 # myset.discard(4) # removes 4 from the set , does not raise error if 4 is not present
@@ -643,17 +682,63 @@
 # popped_value = myset.pop() # removes and returns an arbitrary element from the set
 # print("Popped value:", popped_value)
 # print("After pop:", myset)
+# myset.add(1) # adds 1 to the set
+# print("After adding 1 again:", myset)
 # myset.clear() # clears the set
 # print("After clear:", myset)
 # set2 = {4, 5, 6, 7, 8}
+# print("Set2:", set2)
 # union_set = myset.union(set2) # returns a new set with elements from both sets
 # print("Union of sets:", union_set)
 # intersection_set = myset.intersection(set2) # returns a new set with elements common to both sets
 # print("Intersection of sets:", intersection_set)
 # difference_set = myset.difference(set2) # returns a new set with elements in myset but not in set2
 # print("Difference of sets (myset - set2):", difference_set)
-# symmetric_difference_set = myset.symmetric_difference(set2) # returns a new set with elements in either set but not in both
+# symmetric_difference_set = myset.symmetric_difference(set2) # returns a new set with elements in either set but not in both actually it will perform (myset - set2) union (set2 - myset)
 # print("Symmetric difference of sets:", symmetric_difference_set)
 
+# lets do format string it is used to format strings in python and make them more readable and easier to understand we can use format string to insert variables into strings and control the formatting of the output we can also use format string to create dynamic strings that can change based on the values of variables
+# str = "My name is {}. I am {} years old and my height is {} feet."
+# print(str.format("Tayyab Abdul Hannan", 37, 5.6))
+# name = "Tayyab Abdul Hannan"
+# age = 37
+# height = 5.60000
+# # formatted_string = f"My name is {name}. I am {age} years old and my height is {height:.1f} feet."
+# formatted_string = f"My name is {{name}}. I am {age} years old and my height is {height:.1f} feet."
+# print(formatted_string)
+# print(f"{2*3}")
+# print(type(f"{2*3}"))
 
+#docstrings in python
+# def my_function():
+#     """This is a docstring. 
+#     It is used to describe the function.
+#     It can span multiple lines."""
+#     print("Hello, World!")
+# my_function() # calling the function
+# # print(my_function.__doc__)  # printing the docstring of the function
+# print(help(my_function))   # printing the docstring using help function  provides more detailed information about the function and its usage we can use help function to get information about any built-in function or module in python as well as user-defined functions and modules
 
+#now study pep 8 python enhanced perposel guidelines for python code style
+# PEP 8 is the style guide for Python code it provides guidelines and best practices on how to write Python code in a way that is readable and consistent with the rest of the Python community following PEP 8 guidelines can help improve the readability and maintainability of your code making it easier for others to understand and collaborate on your projects some key PEP 8 guidelines include using 4 spaces per indentation level limiting lines to a maximum of 79 characters using blank lines to separate functions and classes using descriptive variable and function names using spaces around operators and after commas and using comments to explain complex code constructs
+# following PEP 8 guidelines can help you write clean and readable Python code that is easy to understand and maintain
+# a=10
+# b=3
+# print("the value of a=",a , "the value of b=",b , "the addition of a and b is=", a+b)
+# print("the value of a=",a , "the value of b=",b , "the subtraction of a and b is=", a-b)
+# print("the value of a=",a , "the value of b=",b , "the multiplication of a and b is=", a*b)
+# print("the value of a=",a , "the value of b=",b , "the division of a and b is=", a/b)
+# print("the value of a=",a , "the value of b=",b , "the floor division of a and b is=", a//b)
+# print("the value of a=",a , "the value of b=",b , "the modulus of a and b is=", a%b)
+# print("the value of a=",a , "the value of b=",b , "the exponentiation of a and b is=", a**b)
+# formatted_string = f"""the value of a={a} the value of b={b} the addition of a and b is={a+b}
+# the subtraction of a and b is={a-b}
+# the multiplication of a and b is={a*b}
+# the division of a and b is={a/b}
+# the floor division of a and b is={a//b}
+# the modulus of a and b is={a%b}
+# the exponentiation of a and b is={a**b}"""
+# print(formatted_string)
+# import this is used to display the zen of python which is a collection of guiding principles for writing computer programs in python
+# import this
+# it was written by tim peters and is included as an easter egg in the python programming language
