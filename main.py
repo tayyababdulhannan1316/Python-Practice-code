@@ -88,14 +88,14 @@
 # print(list(r))
 # print(tuple(r))
 # lets do mapping data types dict
-# mydict = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
+mydict = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
 # print(type(mydict))
-# print(mydict)
-# print(mydict.values())
-# print(mydict.keys())
-# print(mydict.items())
-# print(mydict.get("name"))
-# print(mydict["age"])
+print(mydict)
+print(mydict.values())
+print(mydict.keys())
+print(mydict.items())
+print(mydict.get("name"))
+print(mydict["age"])
 # lets do set data type
 # myset = {1, 2, 3, 4, 5}
 # print(type(myset))
@@ -358,18 +358,18 @@
 # greet("Tayyab Abdul Hannan")
 
 #let do another function with basic arithmetic operations take 2 numbers as input and return and print their sum and difference
-def arithmetic_operations(num1, num2):
-    sum_result = num1 + num2
-    difference_result = num1 - num2
-    print("Sum:", sum_result)
-    print("Difference:", difference_result)
-a, b = map(int, input("Enter two numbers separated by space: ").split())
-arithmetic_operations(a , b)
+# def arithmetic_operations(num1, num2):
+#     sum_result = num1 + num2
+#     difference_result = num1 - num2
+#     print("Sum:", sum_result)
+#     print("Difference:", difference_result)
+# a, b = map(int, input("Enter two numbers separated by space: ").split())
+# arithmetic_operations(a , b)
 
 # def pass_function():
 #     pass # it is used when we want to create a function but we don't want to write any code in it yet
 # pass_function()
-#function arguments with examples
+# function arguments with examples
 # def function_arguments(arg1, arg2, arg3="default value"):
 #     print("Argument 1:", arg1)
 #     print("Argument 2:", arg2)
@@ -379,24 +379,33 @@ arithmetic_operations(a , b)
 # function_arguments(arg2="value2", arg1="value1") # calling function with keyword arguments order doesn't matter
 # function_arguments(arg3="custom value3", arg1="value1", arg2="value2")
 
-# def average(*args): #this is example of variable length arguments and tuqple unpacking 
-#     total = sum(args)
+# def average(*args): #this is example of variable length arguments and tuple unpacking 
+#     total = sum(args) #here sum is a built in function 
 #     print("Total = ", total)
-#     count = len(args)
-#     print("Count = ", count)
-#     avg = total / count
+#     avg = total // len(args)
 #     return avg
-# result = average(10, 20, 30, 40, 50,60,70,80,90,100)
+# result = average( 45, 76, 50,60,70,80,90,100)
 # print("Average:", result)
-
+# another example for variable length inputs using unpacking of tuple
+# def avg(*numbers):
+#     sum=0
+#     for i in numbers:
+#         sum = sum+i
+#     print("average is:",sum//len(numbers))
+# avg(50,70,90,100)
 #lets do an example of dictionary unpacking with function
 # def display_info(name, age, city):
 #     print("Name:", name)
 #     print("Age:", age)
 #     print("City:", city)    
-# info = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
-# display_info(**info) # dictionary unpacking with ** operator
+# info = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"} 
+# display_info(**info) # dictionary unpacking with ** operator **operator will unpack the dictionary and pass the key value pairs as arguments to the function
 
+#lets do another example of dictionary unpacking with function
+# def name_print(**name):
+#   print("Hello", name["fname"], name["mname"], name["lname"])
+
+# name_print(mname="abdul", lname = "hannan" , fname = "tayyab")  
 #lets do an example of returning multiple values from a function
 # def calculate_operations(num1, num2):
 #     sum_result = num1 + num2
@@ -410,6 +419,36 @@ arithmetic_operations(a , b)
 # print("Difference:", diff_val)
 # print("Product:", prod_val)
 # print("Quotient:", quot_val)
+
+# lets do recursion in function
+# def factorial(n):
+#   if(n==0 or n==1 ):
+#      return 1
+#   elif(n>=2):
+#      return n*factorial(n-1)
+#   else:
+#      return print("please enter a valid input")
+# # print(factorial(3))
+# print(f"factorial of given number: ", factorial(5))
+#5*fact(4)
+#5*4*fact(3)
+#5*4*3*fact(2)
+#5*4*3*2*fact(1)
+#5*4*3*2*1
+
+# lets do aonother example of recusion fibonacci sequence
+
+# def fib(n):
+#    if(n==0 or n==1):
+#       return 1
+#    else:
+#       return (fib(n-1)+fib(n-2))
+   
+# print(f"the fib sequence is:",fib(5))   
+      
+
+
+
 
 #lets code on lists in python
 # fruits = ["apple", "banana", "cherry" ,10.5 , True , None]
@@ -664,9 +703,17 @@ arithmetic_operations(a , b)
 
 
 #lets do sets in python
+# empty = {}
+# empty2 = set ()
+# print(type(empty))
+# print(type(empty2))
+# mixset = {1, 2.5, "hello", True, None}
+# print(mixset)
+# for value in mixset:
+#     print(value)
 # myset = {1, 2, 3, 4, 5, 5, 4, 3, 2, 1}
 # print("myset:", myset) # duplicates will be removed
-# # print(type(myset))
+# # # print(type(myset))
 # myset2 = {5, 6, 10, 8, 3}
 # print("myset2:", myset2)
 # print(myset2)
@@ -689,13 +736,49 @@ arithmetic_operations(a , b)
 # set2 = {4, 5, 6, 7, 8}
 # print("Set2:", set2)
 # union_set = myset.union(set2) # returns a new set with elements from both sets
+# union_set2 = myset | set2  # another way to do union of sets
 # print("Union of sets:", union_set)
+# print("Union of sets using | operator:", union_set2)
 # intersection_set = myset.intersection(set2) # returns a new set with elements common to both sets
 # print("Intersection of sets:", intersection_set)
+# intersection_set2 = myset & set2  # another way to do intersection of sets
+# print("Intersection of sets using & operator:", intersection_set2)
+# intersection_update_set = myset.intersection_update(set2) # updates myset with elements common to both sets
+# print("After intersection update myset:", myset)
 # difference_set = myset.difference(set2) # returns a new set with elements in myset but not in set2
 # print("Difference of sets (myset - set2):", difference_set)
+# difference_set2 = myset - set2  # another way to do difference of sets
+# print("Difference of sets using - operator (myset - set2):", difference_set2)
 # symmetric_difference_set = myset.symmetric_difference(set2) # returns a new set with elements in either set but not in both actually it will perform (myset - set2) union (set2 - myset)
 # print("Symmetric difference of sets:", symmetric_difference_set)
+# symmetric_difference_set2 = myset ^ set2  # another way to do symmetric difference of sets
+# print("Symmetric difference of sets using ^ operator:", symmetric_difference_set2)
+# print("Is 2 present in myset?", 2 in myset) # membership operator
+# print("Is 10 present in myset?", 10 in myset) # membership operator
+# print("Is myset a superset of set2?", myset.issuperset(set2)) # checks if myset is a superset of set2
+# print("Is set2 a subset of myset?", set2.issubset(myset)) # checks if set2 is a subset of myset
+# print("Is myset disjoint with set2?", myset.isdisjoint(set2)) # checks if myset is disjoint with set2
+# delete_set = myset.copy() # creates a copy of the set
+# print("Copy of myset delete_set:", delete_set)
+# del delete_set # deletes the set
+# print("After deleting delete_set trying to print delete_set:")  
+# print(delete_set) # this will raise an error because delete_set variable is deleted
+# clean_set = myset.copy() # creates a copy of the set
+# print("Copy of myset clean_set:", clean_set)
+# clean_set.clear() # clears the set
+# print("After clearing clean_set:", clean_set) # it will print empty set but clean_set variable is still present that's why no error will be raised
+
+
+
+
+
+
+
+
+
+
+
+
 
 # lets do format string it is used to format strings in python and make them more readable and easier to understand we can use format string to insert variables into strings and control the formatting of the output we can also use format string to create dynamic strings that can change based on the values of variables
 # str = "My name is {}. I am {} years old and my height is {} feet."
