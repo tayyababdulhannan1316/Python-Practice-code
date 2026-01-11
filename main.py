@@ -1,11 +1,11 @@
-# # print("tayyab abdul hannan")
-# # print("Hello, World!")
-# # print("Welcome to Python programming.")
-# # print("This is a sample Python script.")
-# # print("Enjoy coding!")
-# # print("Have a great day!")
-# # print("Let's learn Python together.")
-# # print("Keep practicing to improve your skills.")
+# print("tayyab abdul hannan")
+# print("Hello, World!")
+# print("Welcome to Python programming.")
+# print("This is a sample Python script.")
+# print("Enjoy coding!")
+# print("Have a great day!")
+# print("Let's learn Python together.")
+# print("Keep practicing to improve your skills.")
 # print(3+2)
 # import pandas
 # print(pandas.__version__)
@@ -87,15 +87,51 @@
 # print(r)
 # print(list(r))
 # print(tuple(r))
-# lets do mapping data types dict
-mydict = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
+
+# lets do mapping data types dictionary
+# mydict = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
 # print(type(mydict))
-print(mydict)
-print(mydict.values())
-print(mydict.keys())
-print(mydict.items())
-print(mydict.get("name"))
-print(mydict["age"])
+# print(mydict)
+# print(mydict.values())
+# print(mydict.keys())
+# print(mydict.items())
+# print(mydict.get("name")) #it will not generate error if value not found
+# print(mydict["name"]) #it will generate error if value not found
+# print(mydict["age"])
+# for key in mydict.keys():
+#   print(mydict[key])
+# for key,value in mydict.items():
+#   print(f"the value corresponding to {key} is {value}")
+
+
+# Methods of dictionary
+# mydict2 = {"id1":"tayyab" , "id2":"shazain"}
+# print(mydict2)
+# mydict.update(mydict2)
+# print("the value of mydict after merge",mydict)
+# mydict2.clear() # clears the dictionary will not delete it
+# print("the value of mydict after clear",mydict2)
+# mydict.pop("age")
+# print("the value of mydict after pop age",mydict)
+# mydict.popitem() # it will remove last inserted item
+# print("the value of mydict after popitem",mydict)
+# del mydict2
+# print("the value of mydict2 after del",mydict2) # it will raise an error because mydict2 is deleted
+# del mydict["city"]
+# print("the value of mydict after del city",mydict)
+# mydict_copy = mydict.copy()
+# print("the value of mydict_copy",mydict_copy)
+# mydict_fromkeys = dict.fromkeys(["key1", "key2", "key3"], "default_value") # it will create a dictionary with keys from the list and all values set to default_value
+# print("the value of mydict_fromkeys",mydict_fromkeys)
+# mydict_setdefault = mydict.setdefault("country", "Pakistan") # it will add the key country with value Pakistan if country key is not present in the dictionary if it is present it will return the value of country key
+# print("the value of mydict after setdefault",mydict)
+# print("the value returned by setdefault",mydict_setdefault)
+
+
+
+
+
+
 # lets do set data type
 # myset = {1, 2, 3, 4, 5}
 # print(type(myset))
@@ -237,7 +273,50 @@ print(mydict["age"])
 #         print("You entered a positive number.")
 # else:
 #     print("You entered a negative number.")
-    
+
+
+#for loop with else
+# else executed when loop is completed successfully without break statement
+# for i in range(1, 6):
+#     print(i)
+# else:
+#     print("for Loop completed successfully.")
+
+#we can do the same with while loop
+# count = 1
+# while count <= 5:
+#     print(count)
+#     count += 1
+# else:
+#     print("While loop completed successfully.")
+
+#we can do another example of for loop with else
+# fruits = ["apple", "banana", "cherry"]
+# for fruit in fruits:
+#     print(fruit)
+# else:
+#     print("All fruits have been printed.")
+
+#another example of do while loop with while and else
+# count = 1
+# while True:
+#     print(count)
+#     count += 1
+#     if count > 5:
+#         break
+# else:
+#     print("While loop completed successfully.") # this else will not be executed because of break statement in the loop else block will be executed only if loop is not terminated by break statement
+
+# for i in []:
+#     print(i)
+# else:
+#     print("The loop did not execute because the iterable was empty.")
+
+# for x in range(3):
+#     print("Iteration no {} in for loop".format(x+1)) # it will print from 0 to 2 the {} is used to format the string and x+1 is used to print the iteration number starting from 1
+# else:
+#     print("for Loop completed successfully after {} iterations.".format(x+1))
+# print("End of for loop.")
 
 #lets do an exercise using time module
 # import time
@@ -772,14 +851,6 @@ print(mydict["age"])
 
 
 
-
-
-
-
-
-
-
-
 # lets do format string it is used to format strings in python and make them more readable and easier to understand we can use format string to insert variables into strings and control the formatting of the output we can also use format string to create dynamic strings that can change based on the values of variables
 # str = "My name is {}. I am {} years old and my height is {} feet."
 # print(str.format("Tayyab Abdul Hannan", 37, 5.6))
@@ -825,3 +896,56 @@ print(mydict["age"])
 # import this is used to display the zen of python which is a collection of guiding principles for writing computer programs in python
 # import this
 # it was written by tim peters and is included as an easter egg in the python programming language
+
+
+#lets do math functions
+# print(min(10,45,20,3,9,50,190,35,77,60))
+# print(max(10,45,20,3,9,50,190,35,77,60))
+# print(sum([10,45,20,3,9,50,190,35,77,60]))
+# print(abs(-10))
+# print(round(10.5678))
+# print(pow(2,3)) # 2 raised to the power 3
+# import math
+# print(math.sqrt(16)) # square root of 16
+# print(math.ceil(10.2)) # rounds up to the nearest integer
+# print(math.floor(10.8)) # rounds down to the nearest integer
+# print(math.factorial(5)) # factorial of 5
+# print(math.gcd(48, 18)) # greatest common divisor of 48 and 18
+# print(math.lcm(4, 6)) # least common multiple of 4 and 6
+# print(math.pi) # value of pi
+# print(math.e) # value of e
+# print(math.sin(math.pi/2)) # sine of 90 degrees
+# print(math.cos(0)) # cosine of 0 degrees
+# print(math.tan(math.pi/4)) # tangent of 45 degrees
+# print(math.log(100, 10)) # logarithm of 100 to the base 10
+# print(math.exp(2)) # e raised to the power 2
+# print(math.radians(180)) # converts degrees to radians
+# print(math.degrees(math.pi)) # converts radians to degrees
+# print(math.copysign(-5, 3)) # returns a float with the magnitude of the first argument and the sign of the second argument
+# print(math.isqrt(20)) # returns the integer square root of the non-negative integer n
+# print(math.dist((1,2), (4,6))) # returns the Euclidean distance between two points
+# print(math.hypot(3,4)) # returns the Euclidean norm, sqrt(x*x + y*y)
+# print(math.prod([1,2,3,4])) # returns the product of a start value (default: 1) times an iterable of numbers
+# print(math.trunc(10.5678)) # returns the truncated integer value of a float
+
+
+
+
+#lets do error handling in python
+try:
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    result = num1 / num2
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+except ValueError:
+    print("Error: Invalid input. Please enter numeric values.")
+except Exception as e:
+    print("An unexpected error occurred:", str(e))
+else:
+    print("Division completed successfully.")
+finally:
+    print("Thank you for using the division program.")
+
+
