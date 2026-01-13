@@ -130,8 +130,6 @@
 
 
 
-
-
 # lets do set data type
 # myset = {1, 2, 3, 4, 5}
 # print(type(myset))
@@ -275,6 +273,25 @@
 #     print("You entered a negative number.")
 
 
+#lets make a calculator using if else statements use all operators and input operator from user too
+# num1 = float(input("Enter first number: "))
+# operator = input("Enter operator (+, -, *, /): ")
+# num2 = float(input("Enter second number: "))
+
+# if operator == "+":
+#     print(num1 + num2)
+# elif operator == "-":
+#     print(num1 - num2)
+# elif operator == "*":
+#     print(num1 * num2)
+# elif operator == "/":
+#     if num2 != 0:
+#         print(num1 / num2)
+#     else:
+#         print("Error: Division by zero is not allowed.")
+# else:
+#     print("Invalid operator.")
+
 #for loop with else
 # else executed when loop is completed successfully without break statement
 # for i in range(1, 6):
@@ -318,6 +335,38 @@
 #     print("for Loop completed successfully after {} iterations.".format(x+1))
 # print("End of for loop.")
 
+#lets do anexample using nested for loop
+# for i in range(1, 4):
+#     for j in range(1, 4):
+#         print(f"i = {i}, j = {j}")
+#     print("Inner loop completed for i =", i)
+# print("Outer loop completed.")
+
+# lets do an example using nested while loop
+# i = 1
+# while i <= 3:
+#     j = 1
+#     while j <= 3:
+#         print(f"i = {i}, j = {j}")
+#         j += 1
+#     print("Inner loop completed for i =", i)
+#     i += 1
+# print("Outer loop completed.")
+
+
+# countries = ["USA", "Canada", "UK", "Pakistan"]
+# for country in countries:
+#     print(country)
+
+# words = "helloworld"
+# for word in words:
+#     print(word)
+
+# n=int(input("Enter a number to print its table: "))
+# for i in range(1,11):
+#   print(f"{n} * {i} = {n*i}")
+
+
 #lets do an exercise using time module
 # import time
 # current_time = time.localtime()
@@ -360,11 +409,11 @@
 #         print("Saturday")
 #     case 7:
 #         print("Sunday")
-#     case _ if day<1 or day>7: #  wildcard case with condition
-#         print("Day number must be between 1 and 7") # added condition to wildcard case
 #     case _ if day==0:    # default case will not work with condition
 #         print("Day number cannot be zero") 
-#     case _: # default case
+#     case _ if day<0 or day>7: #  wildcard case with condition
+#         print("Day number must be between 1 and 7") # added condition to wildcard case
+#     case _: # default case will work without condition will catch all other cases at input value not matched with any case
 #         print("Invalid day number")
 # lets do for loop
 # fruits = ["apple", "banana", "cherry"]
@@ -927,25 +976,164 @@
 # print(math.hypot(3,4)) # returns the Euclidean norm, sqrt(x*x + y*y)
 # print(math.prod([1,2,3,4])) # returns the product of a start value (default: 1) times an iterable of numbers
 # print(math.trunc(10.5678)) # returns the truncated integer value of a float
-
+# the evaluate function evaluates a string as a python expression and returns the result it can be used to dynamically execute python code stored in a string format
+# expression = "3 + 5 * 2 - (4 / 2)"
+# result = eval("3 + 5 * 2 - (4 / 2)")
+# print("The result of the expression is:", result)
 
 
 
 #lets do error handling in python
-try:
-    num1 = int(input("Enter first number: "))
-    num2 = int(input("Enter second number: "))
-    result = num1 / num2
-    print("Result:", result)
-except ZeroDivisionError:
-    print("Error: Cannot divide by zero.")
-except ValueError:
-    print("Error: Invalid input. Please enter numeric values.")
-except Exception as e:
-    print("An unexpected error occurred:", str(e))
-else:
-    print("Division completed successfully.")
-finally:
-    print("Thank you for using the division program.")
+# try:
+#     num1 = int(input("Enter first number: "))
+#     num2 = int(input("Enter second number: "))
+#     result = num1 / num2
+#     print("Result:", result)
+# except ZeroDivisionError: #Catches division by zero error
+#     print("Error: Cannot divide by zero.")
+# except ValueError: #Catches value error if user enters non numeric value
+#     print("Error: Invalid input. Please enter numeric values.")
+# except Exception as e: #Catches any other error not handled above
+#  e stores the error message
+#     print("An unexpected error occurred:", str(e))
+# else: # executes if no exception occurs and the try block is successful it is optional
+#     print("Division completed successfully.")
+# finally: # always executes regardless of whether an exception occurred or not it is also optional
+#     print("Thank you for using the division program.")
 
+# lets make another program for try except finally
 
+# try:
+#      a=int(input("enter a number whose table is to be printed:"))
+#      print(f"the table of {a} is :")
+#      for i in range(1,11):
+#          print(f"{a}*{i} = {a*i}")
+# except:
+#      print("an invalid input is enterred:")
+# finally:
+#      print("table printed successfully")
+
+# another example of try except finally which focus on importance of finally block
+# try:
+#      file = open("sample.txt", "r") # trying to open a file in read mode named sample.txt and assigning it to variable file
+#      content = file.read() # reading the content of the file
+#      print(content) # printing the content of the file
+# except FileNotFoundError: # catching file not found error
+#      print("Error: The file was not found.")
+# except Exception as e: # catching any other exception
+#      print("An unexpected error occurred:", str(e))
+# finally: # finally block to close the file if it was opened
+#      print("Closing the file.")
+#      try:
+#          file.close()
+#      except:
+#          print("File was not opened, so cannot be closed.")
+
+#another example of try except finally which focus on importance of finally block
+# def func():
+#           try:
+#                lst = [10 ,20,30, 40, 50]
+#                i = int(input("enter index"))
+#                print(lst[i])
+#                return 1
+#           except:
+#                print("an error occured")
+#                return 0
+#           finally:
+#                print("execution of finally block")
+#                print("function execution completed")
+
+# result = func()
+# print("function returned:", result)
+
+# in this program we defined a function check_age that raises a ValueError if the age is negative or greater than 150 we then use a try except block to catch and handle the exception when the user inputs an invalid age  
+# lets raise custom exceptions in python
+# def check_age(age):
+#     if age < 0:
+#         raise ValueError("Age cannot be negative.")
+#     elif age > 150:
+#         raise ValueError("Age is too high.")
+#     else:
+#         print("Age is valid.")
+# try:
+#     user_age = int(input("Enter your age: "))
+#     check_age(user_age)
+# except ValueError as ve:
+#     print("Invalid age:", ve)
+# except Exception as e:
+#     print("An unexpected error occurred:", str(e))
+
+# a = int(input("Enter a number between 1 and 10: "))
+# if a < 1 or a > 10:
+#         raise ValueError("Please enter a number between 1 and 10.")
+
+#lets do another example of raising custom error
+# class NegativeNumberError(Exception):
+#     """Custom exception for negative numbers."""
+#     pass
+# def calculate_square_root(number):
+#     if number < 0:
+#         raise NegativeNumberError("Cannot calculate square root of a negative number.")
+#     return number ** 0.5 # calculate square root
+# try:
+#     num = float(input("Enter a number to calculate its square root: "))
+#     result = calculate_square_root(num)
+#     print(f"The square root of {num} is {result}")
+# except NegativeNumberError as nne: # catching custom negative number error
+#     print("Error:", nne)
+# except ValueError: # catching value error for non numeric input
+#     print("Invalid input. Please enter a numeric value.")
+# except Exception as e: # catching any other exception
+#     print("An unexpected error occurred:", str(e))
+# In this program we defined a custom exception NegativeNumberError to handle cases where the user tries to calculate the square root of a negative number the calculate_square_root function raises this exception if the input number is negative we then use a try except block to catch and handle the custom exception as well as other potential exceptions like ValueError for non numeric inputs
+
+# KBC 20 questions python quiz improved version
+# Questions = [
+#   ["What is the output of print(2**3)?", "8", "6", "9", "12", 1],
+#   ["Which keyword is used to define a function in Python?", "func", "def", "function", "define", 2],
+#   ["What is the correct way to create a list in Python?", "list = {}", "list = []", "list = ()", "list = <>", 2],
+#   ["Which of the following is a valid variable name in Python?", "1variable", "variable_name", "variable-name", "variable name", 2],
+#   ["What does the 'len()' function do in Python?", "Returns the number of elements in a list/string", "Returns the last element of a list/string", "Returns the first element of a list/string", "Returns the sum of elements in a list", 1],
+#   ["What is the output of print(2+3*4)?", "20", "14", "24", "None of the above", 2],
+#   ["What is the correct file extension for Python files?", ".pyth", ".pt", ".pyt", ".py", 4],
+#   ["Which of the following is used to define a block of code in Python?", "Braces {}", "Parentheses ()", "Indentation", "Quotes ''", 3],
+#   ["What is the output of print(10//3)?", "3.33", "3", "4", "None of the above", 2],
+#   ["Which of the following is a mutable data type in Python?", "Tuple", "String", "List", "Integer", 3],
+#   ["What is the output of print(10%3)?", "1", "3", "0", "None of the above", 1],
+#   ["Which of the following is used to define a block of code in Python?", "Braces {}", "Parentheses ()", "Indentation", "Quotes ''", 3],
+#   ["What is the output of print(5 in [1,2,3,4,5])?", "True", "False", "Error", "None of the above", 1],
+#   ["Which of the following is a valid way to create a dictionary in Python?", "{}", "[]", "()","{}", 1],
+#   ["What is the output of print(type(2+3j))?", "<class 'int'>","<class 'float'>","<class 'complex'>","<class 'bool'>",3],
+#   ["Which method is used to add an element to a list in Python?", ".append()",".add()",".insert()",".extend()",1],
+#   ["What does the 'is' operator do in Python?", "Checks if two variables refer to the same object","Checks if two variables have the same value","Checks if two variables are equal in value and type","None of the above",1],
+#   ["Which keyword is used to import a module in Python?", "import","include","using","module",1],
+#   ["What is the output of print(bool(0))?", "True","False","Error","None of the above",2],
+#   ["Which of the following is used to create a set in Python?", "[]","()","{}","<>",3]
+# ]
+
+# Levels = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 3276800, 640000, 1250000, 2500000,5000000, 10000000, 20000000, 30000000,50000000, 70000000, 100000000] #list of levels in rs for each question
+# money = 0
+# for i in range(0, len(Questions)):
+#     Question = Questions[i]
+#     print(f"\nQuestion for Rs.{Levels[i]}:")
+#     print(f"{i+1}. {Question[0]}")
+#     print(f"a. {Question[1]}    b. {Question[2]}    c. {Question[3]}    d. {Question[4]}")   
+#     reply = int(input("Enter your answer  as (1-4): or enter 0 to quit:\n "))
+#     if(reply == 0):
+#         print("You have chosen to quit the game.")
+#         money = Levels[i-1] if i > 0 else 0
+#         break  
+#     if (reply == Question[-1]): # checking if the answer is correct -1 index contains the correct option number
+#         print("Correct answer! You have won Rs.", Levels[i])
+#         if(i == 4):
+#             money = 10000
+#         elif(i == 9 ):
+#             money = 320000
+#         elif(i == 14):
+#             money = 10000000
+#         elif(i == 19):
+#             money = 700000000
+#     else:
+#         print("Wrong answer! You lost all your winnings.")
+#         break
+# print(f"You have won a total of Rs.{money}")
