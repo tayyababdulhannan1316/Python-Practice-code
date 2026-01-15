@@ -174,7 +174,7 @@
 # print(b[-3:-1])  # it will print from index len(b)-3 to len(b)-2 ,len(b)-1 is excluded
 # print(b[-1:-3])  # it will return empty string because in negative indexing it will start from right to left
 # print(x[-4:-2])
-#strings are immutable
+# lets do string methods always remember strings are immutable
 # print(x.strip()) # removes any whitespace from the beginning or the end
 # print(x.rstrip("!")) # removes any whitespace from the end
 # print(x.lstrip("s")) # removes any whitespace from the beginning
@@ -197,7 +197,31 @@
 # print(x.startswith("s")) # returns true if the string starts with the specified value
 # print(x.swapcase()) # Swaps cases, lower case becomes upper case and vice versa
 
-#condtional statements just starts from here
+# myemail = "tayyab123@gmail.com" #our task is to extract username and domain name from this email using string methods and also find the position of @ and . symbols also separate digit part too  like 123 from username
+# at_position = myemail.find("@")
+# dot_position = myemail.find(".")
+# username = myemail[:at_position]
+# domain = myemail[at_position+1:dot_position]
+# domain_extension = myemail[dot_position+1:]
+# digits = ""
+# letters = ""
+# for ch in username:
+#     if ch.isdigit():
+#         digits += ch
+#     else:
+#         letters += ch
+
+# print("Email:", myemail)
+# print("Username:", username)
+# print("Domain:", domain)
+# print("Domain Extension:", domain_extension)
+# print("Digits in Username:", digits)
+# print("Letters in Username:", letters)
+# print("Position of @ symbol:", at_position)
+# print("Position of . symbol:", dot_position)
+
+
+#lets do condtional statements from here
 #membership operators is used to check if a value is present in a sequence such as string ,list ,tuple ,set ,dictionary
 # x = "hello world"
 # print("h" in x)
@@ -291,6 +315,20 @@
 #         print("Error: Division by zero is not allowed.")
 # else:
 #     print("Invalid operator.")
+
+#short hand if else 
+
+# a = int(input("enter value of a:"))
+# b = int(input("enter value of b:"))
+# print("A") if a>b else print("=") if a==b else print("B")
+
+
+# lets do another example of short hand if else
+# 
+# lets do another example of short hand if else with multiple conditions
+# num = int(input("Enter a number: "))
+# result = "Positive" if num > 0 else "Zero" if num == 0 else "Negative"
+# print(result)
 
 #for loop with else
 # else executed when loop is completed successfully without break statement
@@ -1137,3 +1175,89 @@
 #         print("Wrong answer! You lost all your winnings.")
 #         break
 # print(f"You have won a total of Rs.{money}")
+
+
+#lets understand random module in python
+# import random
+# print(random.randint(1, 100)) # prints a random integer between 1 and 100 inclusive
+# print(random.choice(['apple', 'banana', 'cherry'])) # prints a random element from the list
+# print(random.random()) # prints a random float between 0.0 and 1.0
+# print(random.uniform(1.5, 10.5)) # prints a random float between 1.5 and 10.5
+# my_list = [1, 2, 3, 4, 5]
+# random.shuffle(my_list) # shuffles the list in place
+# print(my_list) # prints the shuffled list
+
+
+
+
+
+# write a program to translate a message in to secret code language. Use the rules below to translate normal english language into secret code language.
+#coding rules:
+# if the word contains atleast 3 characters then remove first letter and append at the end
+#now append 3 random characters at starting and ending of the word
+#else reverse the string
+#decoding rules:
+#if the word contains less than 3 characters then reverse the string
+#esle 
+#remove 3 random characters from starting and ending of the word
+#remove last letter and append at the starting of the word
+#your program should ask user whether he wants to encode or decode a message and then perform the operation accordingly
+#after encoding or decoding display the final message to the user and ask if he wants to perform another operation or exit the program
+# import random #importing random module to generate random characters
+# def generate_random_string(length=3): #function to generate random string of given length
+#     letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789' #list of characters to choose from
+#     return ''.join(random.choice(letters) for _ in range(length)) #joining random characters to form a string _ is used when the loop variable is not needed
+# def encode_message(message):
+#     words = message.split() #splitting the message into words based on space actually it will split on any whitespace character
+#     encoded_words = []
+#     for word in words:
+#         if len(word) >= 3:
+#             first_letter = word[0]
+#             rest_of_word = word[1:]
+#             random_prefix = generate_random_string()
+#             random_suffix = generate_random_string()
+#             encoded_word = random_prefix + rest_of_word + first_letter + random_suffix
+#         else:
+#             encoded_word = word[::-1] #reversing the string by slicing with step -1
+#         encoded_words.append(encoded_word)
+#     return ' '.join(encoded_words)
+# def decode_message(encoded_message):
+#     words = encoded_message.split()
+#     decoded_words = []
+#     for word in words:
+#         if len(word) > 6:  # since we added 3 random characters at start and end
+#             core_word = word[3:-3]  # remove first 3 and last 3 characters
+#             last_letter = core_word[-1]
+#             rest_of_word = core_word[:-1]
+#             decoded_word = last_letter + rest_of_word
+#         else:
+#             decoded_word = word[::-1]
+#         decoded_words.append(decoded_word)
+#     return ' '.join(decoded_words) #joining the decoded words to form the final message
+# action = input("Do you want to encode or decode a message? (e/d): ").lower()
+# if action == 'e':
+#     message = input("Enter the message to encode: ")
+#     encoded_message = encode_message(message)
+#     print("Encoded message:", encoded_message)
+# elif action == 'd':
+#     encoded_message = input("Enter the message to decode: ")
+#     decoded_message = decode_message(encoded_message)
+#     print("Decoded message:", decoded_message)
+# else:
+#     print("Invalid action. Please enter 'e' to encode or 'd' to decode.")
+
+
+
+
+
+#enumerate function in python
+#it is used to iterate over a list or any other iterable and get both the index and the value of each element in the iterable
+mylist = ['apple', 'banana', 'cherry']
+for index, value in enumerate(mylist):
+    print(f"Index: {index}, Value: {value}")
+
+
+# another example of enumerate function
+fruits = ['apple', 'banana', 'cherry', 'date']
+for indx, fruit in enumerate(fruits, start=1): # starting index from 1 instead of 0
+    print(f"Fruit {indx}: {fruit}")
