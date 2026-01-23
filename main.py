@@ -1252,12 +1252,24 @@
 
 #enumerate function in python
 #it is used to iterate over a list or any other iterable and get both the index and the value of each element in the iterable
-mylist = ['apple', 'banana', 'cherry']
-for index, value in enumerate(mylist):
-    print(f"Index: {index}, Value: {value}")
+# mylist = ['apple', 'banana', 'cherry']
+# for index, value in enumerate(mylist):
+#     print(f"Index: {index}, Value: {value}")
 
 
-# another example of enumerate function
-fruits = ['apple', 'banana', 'cherry', 'date']
-for indx, fruit in enumerate(fruits, start=1): # starting index from 1 instead of 0
-    print(f"Fruit {indx}: {fruit}")
+# # another example of enumerate function
+# fruits = ['apple', 'banana', 'cherry', 'date']
+# for indx, fruit in enumerate(fruits, start=1): # starting index from 1 instead of 0
+#     print(f"Fruit {indx}: {fruit}")
+
+# lets do another example of enumerate function with better understandings 
+
+# Example 1: Basic usage
+numbers = [10, 20, 30, 40]
+for i, num in enumerate(numbers):
+    print(f"Index: {i}, Value: {num}")
+
+# Example 2: Starting index from a different value
+colors = ['red', 'green', 'blue']
+for i, color in enumerate(colors, start=1):
+    print(f"Position {i}: {color}")
