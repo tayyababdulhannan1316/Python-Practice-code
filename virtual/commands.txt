@@ -1,0 +1,3 @@
+python -m venv myenv
+pp3 install pandas
+myenv\Scripts\activate

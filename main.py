@@ -89,7 +89,7 @@
 # print(tuple(r))
 
 # lets do mapping data types dictionary
-# mydict = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
+# mydict = : "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"}
 # print(type(mydict))
 # print(mydict)
 # print(mydict.values())
@@ -103,11 +103,34 @@
 # for key,value in mydict.items():
 #   print(f"the value corresponding to {key} is {value}")
 
+emp = {
+    1:  "Tayyab", 
+    2:  "Shazain", 
+    3:  "Ahmed", 
+    4:  "Ali"
+}
 
+# print(emp)
+# print(emp.get(2))
+# print(emp.get(5 , "value not found"))
+# emp.update()  # updating age of employee with id 4
+print(emp)
+emp2 = emp.copy()
+# print(emp.pop(3))
+# print(emp)
+# print("the copy of employ",emp2)
+for k,v in emp2.items():
+    print(k,v)
+# print(emp2.popitem())  #will remove value at the end of list
+
+# print(emp.keys())
+# print(emp.values())
+# emp2 = emp.copy()
+# print("the copied dictionary is:", emp2)
 # Methods of dictionary
 # mydict2 = {"id1":"tayyab" , "id2":"shazain"}
 # print(mydict2)
-# mydict.update(mydict2)
+# mydict.update(mydict2)  # merges mydict2 into mydict and updates the values of mydict if keys are same
 # print("the value of mydict after merge",mydict)
 # mydict2.clear() # clears the dictionary will not delete it
 # print("the value of mydict after clear",mydict2)
@@ -564,7 +587,7 @@
 #     print("Name:", name)
 #     print("Age:", age)
 #     print("City:", city)    
-# info = {"name": "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"} 
+# info = : "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"} 
 # display_info(**info) # dictionary unpacking with ** operator **operator will unpack the dictionary and pass the key value pairs as arguments to the function
 
 #lets do another example of dictionary unpacking with function
@@ -1265,11 +1288,47 @@
 # lets do another example of enumerate function with better understandings 
 
 # Example 1: Basic usage
-numbers = [10, 20, 30, 40]
-for i, num in enumerate(numbers):
-    print(f"Index: {i}, Value: {num}")
+# numbers = [10, 20, 30, 40]
+# for i, num in enumerate(numbers):
+#     print(f"Index: {i}, Value: {num}")
 
-# Example 2: Starting index from a different value
-colors = ['red', 'green', 'blue']
-for i, color in enumerate(colors, start=1):
-    print(f"Position {i}: {color}")
+# # Example 2: Starting index from a different value
+# colors = ['red', 'green', 'blue']
+# for i, color in enumerate(colors, start=1):
+#     print(f"Position {i}: {color}")
+
+# lets discuss virtual environments in python it is used to create isolated python environments 
+# for different projects allowing you to manage dependencies and packages separately for each project without interfering with other projects or the global python installation
+# lets understand it with example
+
+# Example 1: Creating and using a virtual environment
+# Virtual environments allow you to manage project-specific dependencies.
+
+# Step 1: Create a virtual environment named 'myenv'
+# Command: python -m venv myenv
+
+# Step 2: Activate the virtual environment
+# On Windows: myenv\Scripts\activate
+# (After activation, your prompt will show (myenv) indicating it's active)
+
+# Step 3: Install packages in the virtual environment
+# Command: pip install requests
+
+# Step 4: Use the installed package in your Python code
+# import requests
+# response = requests.get('https://httpbin.org/get')
+# print(response.json())
+
+# Step 5: Deactivate the virtual environment
+# Command: deactivate
+# (This returns you to the global Python environment)
+
+# Example 2: Checking installed packages in venv
+# Command: pip list
+# This shows only packages installed in the current venv, not globally.
+
+# Example 3: Creating requirements.txt for reproducibility
+# Command: pip freeze > requirements.txt
+# Then, in another venv: pip install -r requirements.txt
+
+# Benefits: Isolated dependencies, no conflicts between projects, easy to share requirements.
