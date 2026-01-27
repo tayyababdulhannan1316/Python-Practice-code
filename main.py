@@ -103,24 +103,24 @@
 # for key,value in mydict.items():
 #   print(f"the value corresponding to {key} is {value}")
 
-emp = {
-    1:  "Tayyab", 
-    2:  "Shazain", 
-    3:  "Ahmed", 
-    4:  "Ali"
-}
+# emp = {
+#     1:  "Tayyab", 
+#     2:  "Shazain", 
+#     3:  "Ahmed", 
+#     4:  "Ali"
+# }
 
 # print(emp)
 # print(emp.get(2))
 # print(emp.get(5 , "value not found"))
 # emp.update()  # updating age of employee with id 4
-print(emp)
-emp2 = emp.copy()
+# print(emp)
+# emp2 = emp.copy()
 # print(emp.pop(3))
 # print(emp)
 # print("the copy of employ",emp2)
-for k,v in emp2.items():
-    print(k,v)
+# for k,v in emp2.items():
+#     print(k,v)
 # print(emp2.popitem())  #will remove value at the end of list
 
 # print(emp.keys())
@@ -242,6 +242,48 @@ for k,v in emp2.items():
 # print("Letters in Username:", letters)
 # print("Position of @ symbol:", at_position)
 # print("Position of . symbol:", dot_position)
+
+# lets study arrays with examples
+#it is different from list data type as it can only one type of data but list can store multiple types of data
+# import array as arr
+# myarray = arr.array('i', [1, 2, 3, 4, 5]) # 'i' is used for integer type array
+from array import * #means import full module with all functions of array
+myarray = array('i', [1, 2, 3, 4, 5]) # 'i' is used for integer type array
+# print(type(myarray)) # data type should be same as written values otherwise
+print(myarray)       # you will get an error
+# myarray.append(6)  # appends 6 at the end of the array
+# print("Array after append:", myarray)
+# myarray.insert(2, 10) # inserts 10 at index 2
+# print("Array after insert:", myarray)
+# myarray.remove(3) # removes first occurrence of 3
+# print("Array after remove:", myarray)
+# myarray.pop() # removes and returns the last element
+# print("Array after pop:", myarray)
+# print("First element:", myarray[0]) # accessing first element
+# print("Last element:", myarray[-1]) # accessing last element
+# myarray.reverse() # reverses the array
+# print("Array after reverse:", myarray)
+# myarray[1] = 20 # updating value at index 2
+# print("Array after update:", myarray)
+# print(type(myarray.tolist())) # converts array to list
+# myarray2 = myarray  # copying array to another array just attaching reference
+# print("the copied array is:", myarray2)
+# myarray2[0] = 100
+# print("the original array after modifying copied array is:", myarray)
+# print("the copied array after modification is:", myarray2)
+# myarray3 = array('i', myarray.tolist()) # creating a new array by copying existing array
+myarray3 = array('i' , (n for n in myarray)) # another way to copy array using generator expression
+print("the new copied array is:", myarray3)
+# print("Array length:", len(myarray)) # length of array
+# for i in myarray:
+#     print(i)
+
+
+
+
+
+
+
 
 
 #lets do condtional statements from here
