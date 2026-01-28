@@ -247,10 +247,10 @@
 #it is different from list data type as it can only one type of data but list can store multiple types of data
 # import array as arr
 # myarray = arr.array('i', [1, 2, 3, 4, 5]) # 'i' is used for integer type array
-from array import * #means import full module with all functions of array
-myarray = array('i', [1, 2, 3, 4, 5]) # 'i' is used for integer type array
+# from array import * #means import full module with all functions of array
+# myarray = array('i', [1, 2, 3, 4, 5]) # 'i' is used for integer type array
 # print(type(myarray)) # data type should be same as written values otherwise
-print(myarray)       # you will get an error
+# print(myarray)       # you will get an error
 # myarray.append(6)  # appends 6 at the end of the array
 # print("Array after append:", myarray)
 # myarray.insert(2, 10) # inserts 10 at index 2
@@ -272,8 +272,8 @@ print(myarray)       # you will get an error
 # print("the original array after modifying copied array is:", myarray)
 # print("the copied array after modification is:", myarray2)
 # myarray3 = array('i', myarray.tolist()) # creating a new array by copying existing array
-myarray3 = array('i' , (n for n in myarray)) # another way to copy array using generator expression
-print("the new copied array is:", myarray3)
+# myarray3 = array('i' , (n for n in myarray)) # another way to copy array using generator expression
+# print("the new copied array is:", myarray3)
 # print("Array length:", len(myarray)) # length of array
 # for i in myarray:
 #     print(i)
@@ -631,6 +631,37 @@ print("the new copied array is:", myarray3)
 #     print("City:", city)    
 # info = : "Tayyab Abdul Hannan", "age": 30, "city": "Faisalabad"} 
 # display_info(**info) # dictionary unpacking with ** operator **operator will unpack the dictionary and pass the key value pairs as arguments to the function
+
+
+# lets do another example of functions
+# def fun(a,b):
+#     c = a + b
+#     print(c)
+#     print(a%b) # it will calculate
+
+# x = 30 ; y = 20
+# fun(x , y)
+
+
+# lets do a function that calculates tax rate
+def calculate_tax_rate(income, tax_paid):
+    if income == 0:
+        return "Cannot calculate tax rate"
+    tax_rate = (tax_paid / income) * 100
+    return tax_rate
+
+income = float(input("Enter your income: "))
+tax_paid = float(input("Enter the tax paid: "))
+tax_rate = calculate_tax_rate(income, tax_paid)
+print("Tax Rate:", tax_rate, "%")
+
+
+
+
+
+
+
+
 
 #lets do another example of dictionary unpacking with function
 # def name_print(**name):
