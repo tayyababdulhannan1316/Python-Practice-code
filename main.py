@@ -618,12 +618,12 @@
 # result = average( 45, 76, 50,60,70,80,90,100)
 # print("Average:", result)
 # another example for variable length inputs using unpacking of tuple
-# def avg(*numbers):
-#     sum=0
-#     for i in numbers:
-#         sum = sum+i
-#     print("average is:",sum//len(numbers))
-# avg(50,70,90,100)
+def avg(*numbers):
+    sum=0
+    for i in numbers:
+        sum = sum+i
+    print("average is:",sum//len(numbers))
+avg(50,70,90,100)
 #lets do an example of dictionary unpacking with function
 # def display_info(name, age, city):
 #     print("Name:", name)
@@ -643,17 +643,17 @@
 # fun(x , y)
 
 
-# lets do a function that calculates tax rate
-def calculate_tax_rate(income, tax_paid):
-    if income == 0:
-        return "Cannot calculate tax rate"
-    tax_rate = (tax_paid / income) * 100
-    return tax_rate
+# lets do a function that calculates tax rate it should also calculate tax amount if income is entered
+# def calculate_tax_rate(income, tax_paid):
+#     if income == 0:
+#         return "Cannot calculate tax rate"
+#     tax_rate = (tax_paid / income) * 100
+#     return tax_rate
 
-income = float(input("Enter your income: "))
-tax_paid = float(input("Enter the tax paid: "))
-tax_rate = calculate_tax_rate(income, tax_paid)
-print("Tax Rate:", tax_rate, "%")
+# income = float(input("Enter your income: "))
+# tax_paid = float(input("Enter the tax paid: "))
+# tax_rate = calculate_tax_rate(income, tax_paid)
+# print("Tax Rate:", tax_rate, "%")
 
 
 
